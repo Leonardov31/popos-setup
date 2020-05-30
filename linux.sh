@@ -20,7 +20,6 @@ sudo adduser leonardo kvm
 
 echo 'Configuring fish shell'
 sudo chsh -s $(which fish) leonardo
-curl -L https://get.oh-my.fish | fish
 
 echo 'Restoring settings via dconf'
 dconf load / < dconf-settings.ini
