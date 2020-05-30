@@ -1,0 +1,4 @@
+geary
+libreoffice-*
+firefox
+firefox-*

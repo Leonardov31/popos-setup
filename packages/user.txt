@@ -1,0 +1,7 @@
+code
+google-chrome-stable
+tilix
+fish
+openjdk-8-jdk
+openssh-server
+fonts-firacode
