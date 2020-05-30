@@ -5,3 +5,4 @@ fish
 openjdk-8-jdk
 openssh-server
 fonts-firacode
+vim
