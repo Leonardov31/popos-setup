@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-
-sudo apt update
+  
+sudo apt-add-repository -y ppa:fish-shell/release-3
+sudo apt-get update
 
 echo 'Removing unused softwares'
 sudo apt-get purge -y $(cat packages/unused.txt)
