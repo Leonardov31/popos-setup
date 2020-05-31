@@ -6,3 +6,6 @@ openjdk-8-jdk
 openssh-server
 fonts-firacode
 vim
+spotify-client
+steam
+ubuntu-restricted-extras
