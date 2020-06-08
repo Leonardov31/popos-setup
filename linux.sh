@@ -29,3 +29,5 @@ echo 'Updating System'
 sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
+
+curl -L https://get.oh-my.fish | fish
