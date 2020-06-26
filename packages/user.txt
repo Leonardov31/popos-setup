@@ -1,4 +1,4 @@
-code
+code-insiders
 google-chrome-stable
 tilix
 fish
