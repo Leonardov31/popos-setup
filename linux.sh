@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-  
+
 sudo apt-add-repository -y ppa:fish-shell/release-3
 sudo apt-get update
 
@@ -20,7 +20,7 @@ echo 'Adding user to virtual machine group'
 sudo adduser leonardo kvm
 
 echo 'Configuring fish shell'
-sudo chsh -s $(which fish) leonardo
+sudo chsh -s $(which fish) viana
 
 echo 'Restoring settings via dconf'
 dconf load / < dconf-settings.ini
@@ -29,5 +29,3 @@ echo 'Updating System'
 sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
-
-curl -L https://get.oh-my.fish | fish
