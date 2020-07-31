@@ -16,6 +16,10 @@ sudo apt-get -y autoremove
 echo 'Adjusting system clock'
 timedatecrl set-locale-rtc true
 
+echo "Configuring git"
+git config --global user.name "leonardov31"
+git config --global user.email "leonardoviana098@gmail.com"
+
 echo 'Adding user to virtual machine group'
 sudo adduser leonardo kvm
 
