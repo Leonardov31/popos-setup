@@ -26,10 +26,18 @@ sudo adduser leonardo kvm
 echo 'Configuring fish shell'
 sudo chsh -s $(which fish) viana
 
+echo 'Creating folder for dev setup'
+mkdir ~/.dev
+
+echo 'Installin development softwares'
+cd dev-setup/
+./install_all.fish
+
 echo 'Restoring settings via dconf'
 dconf load / < dconf-settings.ini
 
 echo 'Updating System'
 sudo apt-get update
 sudo apt-get upgrade -y
-sudo apt-get dist-upgrade -y
+sudo apt-get
+dist-upgrade -y
