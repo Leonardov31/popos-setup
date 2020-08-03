@@ -10,7 +10,7 @@ echo 'Installing user softwares'
 sudo apt-get install -y $(cat packages/user.txt)
 
 echo 'Clean repository cache'
-sudo apt-get  clean
+sudo apt-get clean
 sudo apt-get -y autoremove
 
 echo 'Adjusting system clock'
@@ -29,7 +29,7 @@ sudo chsh -s $(which fish) viana
 echo 'Creating folder for dev setup'
 mkdir ~/.dev
 
-echo 'Installin development softwares'
+echo 'Installing development softwares'
 cd dev-setup/
 ./install_all.fish
 
@@ -39,5 +39,4 @@ dconf load / < dconf-settings.ini
 echo 'Updating System'
 sudo apt-get update
 sudo apt-get upgrade -y
-sudo apt-get
-dist-upgrade -y
+sudo apt-get dist-upgrade -y

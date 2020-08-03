@@ -1,4 +1,4 @@
-code
+code-insiders
 google-chrome-stable
 tilix
 fish
@@ -7,4 +7,5 @@ openssh-server
 fonts-firacode
 vim
 spotify-client
+discord
 ubuntu-restricted-extras

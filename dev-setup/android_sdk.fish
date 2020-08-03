@@ -15,6 +15,9 @@ mv tools/ latest
 
 set -U fish_user_paths $ANDROID_HOME/cmdline-tools/latest/bin $fish_user_paths
 
-yes | sdkmanager "build-tools;30.0.1" "platforms;android-30" "platform-tools"
+yes | sdkmanager "build-tools;30.0.1" "platforms;android-30" "platform-tools" "system-images;android-27;default;x86_64" "emulator"
+
+avdmanager create avd -k "system-images;android-27;default;x86_64" -n Nexus5X -d 10
 
 set -U fish_user_paths $ANDROID_HOME/platform-tools $fish_user_paths
+set -U fish_user_paths $ANDROID_HOME/emulator $fish_user_paths
