@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 
-echo "Flutter Setup"
+printf 'Setting up FLutter'
 
 cd ~/.dev
 

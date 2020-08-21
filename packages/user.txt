@@ -8,6 +8,5 @@ fonts-firacode
 vim
 steam
 ubuntu-restricted-extras
-yaru-theme-gnome-shell 
-yaru-theme-gtk 
 yaru-theme-icon
+peek

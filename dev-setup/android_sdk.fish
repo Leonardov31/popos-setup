@@ -1,5 +1,7 @@
 #!/usr/bin/env fish
 
+printf 'Setting up Android SDK and AVD\n\n'
+
 mkdir ~/.dev/android-sdk
 set ANDROID_HOME ~/.dev/android-sdk
 
