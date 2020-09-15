@@ -1,48 +1,42 @@
 #!/usr/bin/env bash
 
-sudo apt-add-repository -y ppa:fish-shell/release-3
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+sudo apt-add-repository -u https://cli.github.com/packages
 sudo apt-get update
 
-printf '\nRemoving unused softwares\n\n'
+echo 'Removing unused softwares'
 sudo apt-get purge -y $(cat packages/unused.txt)
 
-printf '\nInstalling user softwares\n\n'
+echo 'Installing user softwares'
 sudo apt-get install -y $(cat packages/user.txt)
 
-printf '\nInstalling user softwares with flatpak\n\n'
+echo 'Installing user softwares with flatpak'
 flatpak install -y $(cat packages/flatpak_user.txt)
 
-printf '\nClean repository cache\n\n'
+echo 'Clean repository cache'
 sudo apt-get clean
 sudo apt-get -y autoremove
 
-printf '\nAdjusting system clock\n\n'
+echo 'Adjusting system clock'
 timedatecrl set-locale-rtc true
 
-printf "\nConfiguring git\n\n"
+echo 'Configuring git'
 git config --global user.email "leonardoviana098@gmail.com"
 git config --global user.name "leonardov31"
 
-printf '\nAdding user to virtual machine group\n\n'
+echo 'Adding user to virtual machine group'
 sudo adduser leonardo kvm
 
-printf '\nConfiguring fish shell\n\n'
-sudo chsh -s $(which fish) leonardo
-
-printf '\nCreating folder for dev setup\n\n'
+echo 'Creating folder for dev setup'
 mkdir ~/.dev
 
-printf '\nInstalling development softwares\n\n'
+echo 'Installing development softwares'
 bash dev-setup/install_all.fish
 
-printf '\nRestoring settings via dconf\n\n'
+echo 'Restoring settings via dconf'
 dconf load / < dconf-settings.ini
 
-printf '\nUpdating System\n\n'
+echo 'Updating System'
 sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
-
-printf '\nSetting up Oh-My-Fish\n\n'
-curl -L https://get.oh-my.fish > install
-fish install --path=~/.local/share/omf --config=~/.config/omf

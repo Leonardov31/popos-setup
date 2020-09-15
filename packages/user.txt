@@ -1,12 +1,13 @@
 code
 google-chrome-stable
 tilix
-fish
+zsh
 openjdk-11-jdk
 openssh-server
 fonts-firacode
 vim
 steam
 ubuntu-restricted-extras
-yaru-theme-icon
 peek
+gh
+discord
