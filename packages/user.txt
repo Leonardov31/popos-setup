@@ -12,3 +12,4 @@ peek
 gh
 discord
 spotify-client
+gnome-shell-extension-autohidetopbar 
