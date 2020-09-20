@@ -10,9 +10,6 @@ sudo apt-get purge -y $(cat packages/unused.txt)
 echo 'Installing user softwares'
 sudo apt-get install -y $(cat packages/user.txt)
 
-echo 'Installing user softwares with flatpak'
-flatpak install -y $(cat packages/flatpak_user.txt)
-
 echo 'Clean repository cache'
 sudo apt-get clean
 sudo apt-get -y autoremove
@@ -29,9 +26,6 @@ sudo adduser leonardo kvm
 
 echo 'Creating folder for dev setup'
 mkdir ~/.dev
-
-echo 'Installing development softwares'
-bash dev-setup/install_all.fish
 
 echo 'Restoring settings via dconf'
 dconf load / < dconf-settings.ini

@@ -11,3 +11,4 @@ ubuntu-restricted-extras
 peek
 gh
 discord
+spotify-client
