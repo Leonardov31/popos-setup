@@ -6,10 +6,8 @@ openjdk-11-jdk
 openssh-server
 fonts-firacode
 vim
-steam
 ubuntu-restricted-extras
 peek
 gh
 discord
-spotify-client
 gnome-shell-extension-autohidetopbar 
