@@ -10,5 +10,4 @@ ubuntu-restricted-extras
 peek
 gh
 discord
-steam
 gnome-shell-extension-autohidetopbar 
