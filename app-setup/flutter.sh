@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-echo 'Clonning Flutter'
+echo 'Cloning Flutter'
 git clone https://github.com/flutter/flutter.git ~/.dev/flutter
 
 echo 'Adding flutter to path'
@@ -9,6 +9,7 @@ source ~/.zshrc
 
 echo 'Upgrading flutter'
 flutter upgrade
+yes | flutter doctor --android-licenses
 
 echo 'Flutter doctor'
 flutter doctor -v
