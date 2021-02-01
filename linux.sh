@@ -2,7 +2,7 @@
 
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
 sudo apt-add-repository -u https://cli.github.com/packages
-sudo apt-get update
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
 echo 'Removing unused softwares'
 sudo apt-get purge -y $(cat packages/unused.txt)
@@ -23,6 +23,9 @@ git config --global user.name "leonardov31"
 
 echo 'Adding user to virtual machine group'
 sudo adduser leonardo kvm
+
+echo 'Configuring zsh shell'
+sudo chsh -s /usr/bin/zsh leonardo
 
 echo 'Creating folder for dev setup'
 mkdir ~/.dev
