@@ -2,7 +2,6 @@
 
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
 sudo apt-add-repository -u https://cli.github.com/packages
-curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
 echo 'Removing unused softwares'
 sudo apt-get purge -y $(cat packages/unused.txt)
