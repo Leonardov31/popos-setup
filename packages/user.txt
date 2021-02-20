@@ -11,4 +11,3 @@ peek
 gh
 discord
 gnome-shell-extension-autohidetopbar 
-nodejs
