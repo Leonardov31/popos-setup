@@ -1,7 +1,7 @@
 code
 google-chrome-stable
 tilix
-zsh
+fish
 openjdk-11-jdk
 openssh-server
 fonts-firacode
@@ -11,3 +11,4 @@ peek
 gh
 discord
 gnome-shell-extension-autohidetopbar 
+htop

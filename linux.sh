@@ -23,11 +23,14 @@ git config --global user.name "leonardov31"
 echo 'Adding user to virtual machine group'
 sudo adduser leonardo kvm
 
-echo 'Configuring zsh shell'
-sudo chsh -s /usr/bin/zsh leonardo
+echo 'Configuring fish shell'
+sudo chsh -s /usr/bin/fish leonardo
 
 echo 'Creating folder for dev setup'
 mkdir ~/.dev
+
+echo 'Fix xorg'
+sudo sed -ri 's/^(.*modifier_map.*)/\/\/\1/' /usr/share/X11/xkb/symbols/br
 
 echo 'Restoring settings via dconf'
 dconf load / < dconf-settings.ini

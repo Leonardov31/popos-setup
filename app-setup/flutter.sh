@@ -1,15 +1,14 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env fish
 
 echo 'Cloning Flutter'
 git clone https://github.com/flutter/flutter.git ~/.dev/flutter
 
 echo 'Adding flutter to path'
-echo 'export PATH=$HOME/.dev/flutter/bin:$PATH' >> ~/.zshrc
-source ~/.zshrc
+set -Ua fish_user_paths $HOME/.dev/flutter/bin
 
 echo 'Upgrading flutter'
 flutter upgrade
-yes | flutter doctor --android-licenses
+#yes | flutter doctor --android-licenses
 
 echo 'Flutter doctor'
 flutter doctor -v
