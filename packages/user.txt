@@ -12,3 +12,4 @@ gh
 discord
 gnome-shell-extension-autohidetopbar 
 htop
+transmission
