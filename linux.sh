@@ -9,12 +9,9 @@ sudo apt-get purge -y $(cat packages/unused.txt)
 echo 'Installing user softwares'
 sudo apt-get install -y $(cat packages/user.txt)
 
-echo 'Clean repository cache'
+echo 'Clearing repository cache'
 sudo apt-get clean
 sudo apt-get -y autoremove
-
-echo 'Adjusting system clock'
-timedatecrl set-locale-rtc true
 
 echo 'Configuring git'
 git config --global user.email "leonardoviana098@gmail.com"
