@@ -3,6 +3,8 @@
 echo 'Downloading android-sdk'
 wget https://dl.google.com/android/repository/commandlinetools-linux-6858069_latest.zip
 
+mkdir ~/.dev
+
 echo 'Directory for android-sdk'
 mkdir ~/.dev/android-sdk
 
