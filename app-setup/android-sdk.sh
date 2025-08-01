@@ -22,4 +22,4 @@ rm commandlinetools-linux-6858069_latest.zip
 echo 'Adding android-sdk to path'
 set -Ua fish_user_paths $HOME/.dev/android-sdk/{cmdline-tools/latest/bin,platform-tools}
 
-sdkmanager "build-tools;30.0.2" "platforms;android-30"
+sdkmanager "build-tools;30.0.2" "platforms;android-30" "platform-tools"
